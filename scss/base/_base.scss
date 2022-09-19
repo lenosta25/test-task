@@ -1,0 +1,13 @@
+[class*="__container"] {
+  max-width: $container-width + ($container-padding * 2);
+  width: 100%;
+  padding: 0 $container-padding;
+  margin: 0 auto;
+}
+body {
+  font-family: $font-inter;
+  font-weight: 400;
+  font-size: 19px;
+  color: $basic-color-txt;
+  background-color: $main-bg;
+}
