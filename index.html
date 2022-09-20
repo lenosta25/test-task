@@ -6,22 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./dist/icons.css" />
-    <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="stylesheet" href="./dist/index.css" />
     <title>Pages</title>
   </head>
   <body>
     <header class="header">
       <div class="header__container">
-        <div class="header__left">
-          <img src="./images/logo.svg" alt="logo" />
-          <div>
-            <a href=""><i class="icon-facebook"></i></a>
-            <a href=""><i class="icon-twitter"></i></a>
-            <a href=""><i class="icon-linkedin"></i></a>
+        <div class="header__inner">
+          <img class="header__logo" src="./images/logo.svg" alt="logo" />
+          <div class="header__socials socials">
+            <a class="socials__wrapper" href="#!" target="_blank">
+              <i class="icon-facebook"></i>
+            </a>
+            <a class="socials__wrapper" href="#!" target="_blank">
+              <i class="icon-twitter"></i>
+            </a>
+            <a class="socials__wrapper" href="#!" target="_blank">
+              <i class="icon-linkedin"></i>
+            </a>
           </div>
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__item-link link-active" href="#!">Home</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__item-link" href="#!">About</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__item-link" href="#!">Pages</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__item-link" href="#!"> Contact Us </a>
+              </li>
+            </ul>
+          </nav>
+          <a class="header__cart" href="#!">
+            <i class="icon-cart"></i>
+          </a>
+         <a class="header__btn btn-txt" href="#!"><span>Order Today</span></a>
+         <div class="header__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         </div>
       </div>
     </header>
-    <script src="./app/js/script.js"></script>
+    <!-- <footer class="footer">
+      <div class="footer__container">
+      <div class="footer__socials socials">
+        <a class="socials__wrapper" href="#!" target="_blank">
+          <i class="icon-facebook"></i>
+        </a>
+        <a class="socials__wrapper" href="#!" target="_blank">
+          <i class="icon-twitter"></i>
+        </a>
+        <a class="socials__wrapper" href="#!" target="_blank">
+          <i class="icon-linkedin"></i>
+        </a>
+        <a class="socials__wrapper" href="#!" target="_blank">
+          <i class="icon-instagram"></i>
+        </a>
+      </div>
+    </div>
+    </footer> -->
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -4,10 +4,25 @@
   padding: 0 $container-padding;
   margin: 0 auto;
 }
+
 body {
   font-family: $font-inter;
   font-weight: 400;
-  font-size: 19px;
+  font-size: 18px;
   color: $basic-color-txt;
   background-color: $main-bg;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-txt {
+  font-family: $font-cardo;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.58px;
 }

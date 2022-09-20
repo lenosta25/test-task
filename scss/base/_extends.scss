@@ -1,5 +1,13 @@
-//flex
 %flex{
    display: flex;
    align-items: center;
+   flex-wrap: wrap;
+}
+
+%socials-wrapper{
+   width: 45px;
+   height: 45px;
+   text-align: center;
+   line-height: 44px;
+   transition: all 0.7s ease;
 }

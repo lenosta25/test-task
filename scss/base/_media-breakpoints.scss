@@ -1,9 +1,9 @@
-@mixin desktop() {
-  @media (max-width: map-get($breakpoints, xxl)) {
+@mixin wide-screen() {
+  @media (max-width: map-get($breakpoints,xxl)) {
     @content;
   }
 }
-@mixin laptop() {
+@mixin desktop() {
   @media (max-width: map-get($breakpoints, xl)) {
     @content;
   }

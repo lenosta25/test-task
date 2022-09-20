@@ -1,23 +1,155 @@
 .header {
-   background-color: $main;
-   
-   &__left {
-   }
-   &__logo {
-   }
+  background-color: $main;
+  padding: 20px 0;
+  &__inner {
+    @include flex(row, space-between);
+    gap: 20px;
+  }
+  &__logo {
+    width: 119px;
+  }
+  .socials {
+    @include flex(row, flex-start);
+    gap: 9px;
+    width: 359px;
+    &__wrapper {
+      @include socials(
+        2px,
+        $wight,
+        $wight,
+        $icon-color,
+        $accent,
+        $accent,
+        $wight
+      );
+      font-size: 14px;
+    }
+  }
+  .nav {
+    width: 414px;
+    &__list {
+      @include flex(row, space-evenly);
+      gap: 24px;
+      letter-spacing: 0.17px;
+    }
+    &__item-link {
+      color: $additional-bg;
+      transition: all 0.7s ease;
+      &:hover {
+        color: $accent;
+      }
+    }
+    .link-active {
+      color: $accent;
+    }
+  }
+  &__cart {
+    width: 42px;
+    font-size: 15px;
+    text-align: center;
+
+    i {
+      color: $black;
+      transition: all 0.7s ease;
+    }
+    &:hover {
+      i {
+        color: $accent;
+      }
+    }
+  }
+  &__btn {
+    width: 222px;
+    padding: 18px 0;
+    @include btn-appearance($accent, $accent, $main);
+  }
+  &__burger {
+    display: none;
+    position: relative;
+    height: 26px;
+    width: 48px;
+    cursor: pointer;
+    overflow-x: hidden;
+    span {
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+      width: 33px;
+      height: 3px;
+      border-radius: 50px;
+      background: $accent;
+      transition: all 0.3s ease 0s;
+      &:first-child {
+        top: 0;
+      }
+      &:last-child {
+        top: auto;
+        bottom: 0;
+      }
+    }
+    &._active {
+      span {
+        transform: scale(0);
+        &:first-child {
+          transform: rotate(-45deg);
+          top: calc(50% - 1px);
+        }
+        &:last-child {
+          transform: rotate(45deg);
+          bottom: calc(50% - 1px);
+        }
+      }
+    }
+  }
 }
 
-
 //Media
-// @include desktop{
+@include wide-screen {
+  .header .socials,
+  .header__cart {
+    display: none;
+  }
+}
+@include desktop {
+  .header {
+    padding: 30px 0;
+    .nav {
+      position: absolute;
+      z-index: -1;
+      top: -400px;
+      width: 100%;
+      right: 0;
+      overflow: auto;
+      height: 400px;
+      background-color: $main;
+      opacity: 0.7;
+      &__list{
+        flex-direction: column ;
+        margin-top: 150px;
+        z-index: 2;
+      }
+      &._active {
+        top: 0;
+      }
+    }
+    &__btn {
+      position: absolute;
+      right: 100px;
+    }
+    &__burger {
+      display: block;
+    }
+  }
+
+}
+@include tablet{
+ .header__btn{
+  display: none;
+ }
+}
+// @include mobile{
 
 // }
-// @include laptop{
-   
-// }
-// @include tablet{
-   
-// }
-// @include mobile{
-   
+// @include small-mobile{
+
 // }

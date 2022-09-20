@@ -5,8 +5,54 @@
 //  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 // }
 
+// flex
+@mixin flex($flex-direction, $justify-content) {
+  @extend %flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+// btn-appearance
+@mixin btn-appearance(
+  $color-border,
+  $color-bg,
+  $color-txt
+) {
+  border: 2px solid $color-border;
+  background-color: $color-bg;
+  span{
+    color: $color-txt;
+  }
+  transition: all 0.5s ease;
+  &:hover{
+    transform: scale(1.05)
+  }
+}
+
+// socials-icons
+@mixin socials(
+  $size-border,
+  $color-border,
+  $color-bg,
+  $color-icon,
+  $hover-color-border,
+  $hover-color-bg,
+  $hover-color-icon
+) {
+  @extend %socials-wrapper;
+  border: $size-border solid $color-border;
+  background-color: $color-bg;
+  color: $color-icon;
+  &:hover {
+    border-color: $hover-color-border;
+    background-color: $hover-color-bg;
+    color: $hover-color-icon;
+  }
+}
+
+// box-shadow 
 @mixin box-shadow($x-offset, $y-offset, $blur, $size, $opacity) {
-   -moz-box-shadow: $x-offset $y-offset $blur $size rgba(0, 0, 0, $opacity);
-   -webkit-box-shadow: $x-offset $y-offset $blur $size rgba(0, 0, 0, $opacity);
-   box-shadow: $x-offset $y-offset $blur $size rgba(0, 0, 0, $opacity) ;
- }
+  -moz-box-shadow: $x-offset $y-offset $blur $size rgba(0, 0, 0, $opacity);
+  -webkit-box-shadow: $x-offset $y-offset $blur $size rgba(0, 0, 0, $opacity);
+  box-shadow: $x-offset $y-offset $blur $size rgba(0, 0, 0, $opacity);
+}
