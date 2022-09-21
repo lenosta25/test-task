@@ -24,21 +24,40 @@ h1 {
   line-height: clamp(3rem, 2.464rem + 2.68vw, 4.875rem);
   letter-spacing: 1.3px;
   color: $wight;
+  @include mobile {
+    padding-bottom: 10px;
+    position: relative;
+    &::after {
+      @include pseudo(50px, 3px, $accent);
+      bottom: 0;
+      left: 40%;
+    }
+  }
 }
 h2 {
   @extend %heading-font-weight;
-  font-size: 42px;
+  font-size: clamp(1.875rem, 1.661rem + 1.07vw, 2.625rem);
   line-height: 50px;
   text-align: center;
   color: $main;
-  padding-bottom: 23px;
+  padding-bottom: 28px;
   position: relative;
   &::after {
     @include pseudo(50px, 3px, $accent);
     bottom: 0;
-    left: 50%;
+    left: 48%;
+  }
+  @include desktop {
+    padding-bottom: 16px;
+  }
+  @include mobile {
+    padding-bottom: 10px;
+    &::after {
+      left: 44%;
+    }
   }
 }
+
 h3 {
   @extend %heading-font-weight;
   font-size: 32px;
@@ -72,7 +91,12 @@ h5 {
   @extend %heading-font-weight;
   @extend %btn-txt;
   border: 2px solid $accent;
+  transition: all 0.5s ease;
   span {
     color: $main;
+  }
+  &:hover {
+    transform: scale(1.05);
+    background: $accent;
   }
 }

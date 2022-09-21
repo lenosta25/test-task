@@ -6,6 +6,6 @@ if (burger && nav) {
   burger.addEventListener("click", () => {
     burger.classList.toggle("_active");
     nav.classList.toggle("_active");
-   //  body.classList.toggle("_disable-skroll");
+    //  body.classList.toggle("_disable-skroll");
   });
 }

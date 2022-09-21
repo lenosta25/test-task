@@ -6,7 +6,8 @@
 }
 // pseudo
 @mixin pseudo($width,$height,$color-bg){
-  @extend %pseudo;
+  position: absolute;
+  content: "";
   width: $width;
   height: $height;
   background: $color-bg;

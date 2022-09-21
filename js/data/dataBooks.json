@@ -1,0 +1,20 @@
+[
+   {
+      "id": 1,
+      "imgSrc": "atomic-ones.jpg",
+      "imgAlt": "book atomic one's",
+      "title": "Atomic One’s",
+      "price": 13.84,
+      "txt": "As the book contains theoretical content as well as solved questions.",
+      "view": "Printed Book"
+   },
+   {
+      "id": 2,
+      "imgSrc": "the-dark-light-mini.jpg",
+      "imgAlt": "book the dark light",
+      "title": "The Dark Light",
+      "price": 86.11,
+      "txt": "As the book contains theoretical content as well as solved questions.",
+      "view": "Printed Book"
+   }
+]

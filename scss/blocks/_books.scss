@@ -1,0 +1,111 @@
+.books {
+  &__heading {
+    padding-top: 126px;
+  }
+  &__inner {
+    padding: 70px 0 150px;
+    @include flex(row, flex-start);
+    gap: 38px;
+    flex-wrap: wrap;
+  }
+  .book {
+    @include flex(row, space-between);
+    align-items: flex-start;
+    gap: 30px;
+    padding-left: 10px;
+    &__img-wrapper {
+      width: 285px;
+      height: 382px;
+      img {
+        width: 100%;
+        object-fit: cover;
+        @include box-shadow(-1px, 2px, 11px, 0, 0.2);
+      }
+    }
+    &__content {
+      @include flex(column, space-between);
+      align-items: flex-start;
+      max-width: 287px;
+      height: 382px;
+      &-title {
+        color: $main;
+        margin-top: 38px;
+      }
+      &-price {
+        font-size: 21px;
+        line-height: 33px;
+        color: $accent;
+        margin-bottom: 11px;
+      }
+      &-description {
+        font-size: 19px;
+        line-height: 28px;
+        margin-bottom: 4px;
+      }
+      &-view {
+        color: $main;
+        @extend %custom-list-style;
+        margin-bottom: 17px;
+        &::before {
+          top: 11px;
+        }
+      }
+      &-btn {
+        margin-bottom: 28px;
+        height: 66px;
+        span {
+          padding: 19px 50px 18px;
+          line-height: 66px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1291px) {
+  .books__inner {
+    justify-content: center;
+  }
+}
+@include desktop {
+  .books__heading {
+    padding-top: 84px;
+  }
+}
+@include tablet {
+  .books {
+    &__inner {
+      padding: 30px 0 50px;
+    }
+    .book__img-wrapper {
+      position: relative;
+      img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        margin: auto;
+      }
+    }
+  }
+}
+@include mobile {
+  .books .book {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+    &__content {
+      height: 340px;
+      align-items: center;
+      text-align: center;
+      h3 {
+        font-size: 25px;
+        margin-top: 22px;
+      }
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
