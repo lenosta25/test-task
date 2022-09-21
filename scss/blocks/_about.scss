@@ -1,0 +1,95 @@
+.about {
+  background: $additional-bg;
+  &__inner {
+    @include flex(row, flex-start);
+    padding: 180px 0 140px;
+    gap: 151px;
+  }
+  &__img-wrapper {
+    border: 10px solid $accent;
+    position: relative;
+    width: 545px;
+    height: 640px;
+    img {
+      position: absolute;
+      top: -41px;
+      left: -40px;
+      box-shadow: $shadow-for-photos;
+    }
+  }
+  &__content {
+    @include flex(column, flex-start);
+    align-items: flex-start;
+    height: 607px;
+    gap: 33px;
+    &-heading {
+      &::after {
+        left: 0;
+      }
+    }
+    &-txt {
+      max-width: 559px;
+      font-size: 19px;
+      line-height: 34px;
+    }
+    &-items {
+      @include flex(row, space-between);
+      gap: 30px;
+      padding-left: 10px;
+      .item {
+        &__number {
+          @extend %heading-font-weight;
+          font-size: 54px;
+          line-height: 77px;
+          color: $main;
+        }
+        &__achievements {
+          font-size: 17px;
+        }
+        &:first-child {
+          padding-right: 7px;
+        }
+        & + * {
+          padding-left: 38px;
+          border-left: 1px solid $accent;
+        }
+        &:last-child {
+          padding-left: 66px;
+        }
+      }
+    }
+    .fast-response {
+      @include flex(row, space-between);
+      gap: 40px;
+      max-width: 484px;
+      height: 161px;
+      background: $main;
+      padding: 15px 20px;
+      margin-top: 22px;
+      &__img-wrapper {
+        width: 130px;
+        height: 128px;
+      }
+      &__info {
+        @include flex(column, flex-start);
+        align-items: flex-start;
+        width: 277px;
+        height: 87px;
+        h5 {
+          color: $accent;
+          padding-bottom: 13px;
+        }
+        p {
+          color: $secondary-color-txt;
+          & + * {
+            padding-top: 13px;
+          }
+          a{
+            padding-left: 7px;
+            letter-spacing: 0.19px;
+          }
+        }
+      }
+    }
+  }
+}
