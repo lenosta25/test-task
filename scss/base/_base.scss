@@ -6,23 +6,73 @@
 }
 
 body {
-  font-family: $font-inter;
+  font-family: $main-font;
   font-weight: 400;
   font-size: 18px;
   color: $basic-color-txt;
   background-color: $main-bg;
 
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  // height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
 }
 
-.btn-txt {
-  font-family: $font-cardo;
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 28px;
+h1 {
+  @extend %heading-font-weight;
+  font-size: clamp(1.875rem, 1.268rem + 3.04vw, 4rem);
+  line-height: clamp(3rem, 2.464rem + 2.68vw, 4.875rem);
+  letter-spacing: 1.3px;
+  color: $wight;
+}
+h2 {
+  @extend %heading-font-weight;
+  font-size: 42px;
+  line-height: 50px;
   text-align: center;
-  letter-spacing: 0.58px;
+  color: $main;
+  padding-bottom: 23px;
+  position: relative;
+  &::after {
+    @include pseudo(50px, 3px, $accent);
+    bottom: 0;
+    left: 50%;
+  }
+}
+h3 {
+  @extend %heading-font-weight;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.32px;
+  color: $wight;
+}
+h4 {
+  @extend %heading-font-weight;
+  font-size: 24px;
+}
+h5 {
+  @extend %heading-font-weight;
+  font-size: 22px;
+}
+.btn-with-bg {
+  @extend %heading-font-weight;
+  @extend %btn-txt;
+  border: 2px solid $accent;
+  background-color: $accent;
+  transition: all 0.5s ease;
+  span {
+    color: $main;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btn-with-border {
+  @extend %heading-font-weight;
+  @extend %btn-txt;
+  border: 2px solid $accent;
+  span {
+    color: $main;
+  }
 }

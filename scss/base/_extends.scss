@@ -1,13 +1,44 @@
-%flex{
-   display: flex;
-   align-items: center;
-   flex-wrap: wrap;
+%heading-font-weight {
+  font-family: $heading-font;
+  font-weight: 400;
+}
+%flex {
+  display: flex;
+  align-items: center;
+  //   flex-wrap: wrap;
+}
+%btn-txt {
+  font-size: 19px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.58px;
 }
 
-%socials-wrapper{
-   width: 45px;
-   height: 45px;
-   text-align: center;
-   line-height: 44px;
-   transition: all 0.7s ease;
+%pseudo {
+  position: absolute;
+  content: "";
+}
+
+%socials-wrapper {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 44px;
+  transition: all 0.7s ease;
+}
+
+%custom-list-style {
+  position: relative;
+  padding-left: 26px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    left: 0;
+    top: 7px;
+    background: $accent;
+    z-index: 10;
+  }
 }
