@@ -101,7 +101,7 @@ label {
   font-weight: 400;
 }
 
-.about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .footer .socials, .header .nav__list, .header .socials, .header__inner {
+.partnership .company, .partnership__inner, .about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .footer .socials, .header .nav__list, .header .socials, .header__inner {
   display: flex;
   align-items: center;
 }
@@ -147,7 +147,7 @@ label {
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 19px;
   color: #969AA0;
   background-color: #F5F5F5;
 }
@@ -623,7 +623,6 @@ h5 {
   margin-bottom: 11px;
 }
 .books .book__content-description {
-  font-size: 19px;
   line-height: 28px;
   margin-bottom: 4px;
 }
@@ -723,7 +722,6 @@ h5 {
 }
 .about__content-txt {
   max-width: 559px;
-  font-size: 19px;
   line-height: 34px;
 }
 .about__content-items {
@@ -777,6 +775,7 @@ h5 {
 }
 .about__content .fast-response__info p {
   color: #B4C7E7;
+  font-size: 18px;
 }
 .about__content .fast-response__info p + * {
   padding-top: 13px;
@@ -784,4 +783,28 @@ h5 {
 .about__content .fast-response__info p a {
   padding-left: 7px;
   letter-spacing: 0.19px;
+}
+
+.partnership__heading {
+  padding-top: 126px;
+}
+.partnership__inner {
+  padding: 50px 10px 126px;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 37px;
+}
+.partnership .company {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.partnership .company__name {
+  color: #1B3764;
+  padding-top: 22px;
+}
+.partnership .company__description {
+  max-width: 297px;
+  line-height: 28px;
+  text-align: center;
+  padding-top: 16px;
 }/*# sourceMappingURL=main.css.map */

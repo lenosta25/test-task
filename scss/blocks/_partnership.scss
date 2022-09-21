@@ -1,0 +1,26 @@
+.partnership {
+  &__heading {
+    padding-top: 126px;
+  }
+  &__inner {
+    padding: 50px 10px 126px;
+    @include flex(row, flex-start);
+    gap: 37px;
+    
+  }
+  .company {
+   @include flex(column, flex-start);
+   //  &__img-wrappet {
+   //  }
+    &__name {
+      color: $main;
+      padding-top: 22px;
+    }
+    &__description {
+      max-width: 297px;
+      line-height: 28px;
+      text-align: center;
+      padding-top: 16px;
+    }
+  }
+}
