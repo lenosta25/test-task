@@ -58,7 +58,8 @@ h2 {
   }
 }
 .books .books__heading,
-.about .about__inner{
+.about .about__inner,
+.partnership .partnership__heading{
   @include wide-screen{
     padding-top: 100px;
   }

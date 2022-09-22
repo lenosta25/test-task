@@ -52,8 +52,8 @@
           padding-left: 38px;
           border-left: 1px solid $accent;
         }
-        &:last-child {
-          padding-left: 66px;
+        &:nth-child(2){
+          padding-right: 29px
         }
       }
     }
@@ -160,13 +160,13 @@
           align-items: flex-start;
           max-width: 90px;
           min-height: 140px;
-          padding-left: 0px;
+          padding: 0px;
           border: 0;
           &:first-child {
             padding: 0;
           }
-          &:last-child {
-            padding-left: 0px;
+          &:nth-child(2) {
+            padding-right: 0px;
           }
           &__number {
             font-size: clamp(2.438rem, 1.768rem + 3.35vw, 3.375rem);
