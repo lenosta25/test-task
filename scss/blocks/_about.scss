@@ -84,11 +84,117 @@
           & + * {
             padding-top: 13px;
           }
-          a{
+          a {
             padding-left: 7px;
             letter-spacing: 0.19px;
           }
         }
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .about__img-wrapper {
+    width: clamp(14.688rem, -22.448rem + 64.58vw, 34.063rem);
+    height: clamp(17.5rem, -25.625rem + 75vw, 40rem);
+    img {
+      top: -41px;
+      left: 50px;
+    }
+  }
+}
+@include wide-screen {
+  .about {
+    &__inner {
+      gap: 77px;
+    }
+    &__img-wrapper {
+      border: 7px solid $accent;
+      img {
+        top: -30px;
+        left: 27px;
+      }
+    }
+  }
+}
+@include desktop {
+  .about {
+    &__inner {
+      display: block;
+      position: relative;
+      padding-bottom: 70px;
+    }
+    &__img-wrapper {
+      position: absolute;
+      top: 21%;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    &__content {
+      &-heading {
+        margin-bottom: 335px;
+        &::after {
+          left: 48%;
+        }
+      }
+      align-items: center;
+      height: auto;
+    }
+  }
+}
+@include tablet {
+  .about {
+    &__img-wrapper {
+      top: 18%;
+    }
+    &__content {
+      &-txt {
+        text-align: center;
+      }
+      &-items {
+        padding-left: 0;
+        text-align: center;
+        align-items: flex-start;
+        .item {
+          align-items: flex-start;
+          max-width: 90px;
+          min-height: 140px;
+          padding-left: 0px;
+          border: 0;
+          &:first-child {
+            padding: 0;
+          }
+          &:last-child {
+            padding-left: 0px;
+          }
+          &__number {
+            font-size: clamp(2.438rem, 1.768rem + 3.35vw, 3.375rem);
+          }
+          &__achievements {
+            font-size: clamp(0.875rem, 0.741rem + 0.67vw, 1.063rem);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 540px) {
+  .about {
+    &__img-wrapper {
+      top: 14%;
+      border: 0;
+      img {
+        top: 0;
+        left: 0;
+      }
+    }
+    .fast-response {
+      height: auto;
+      flex-direction: column-reverse;
+      padding: 20px;
+      &__info {
+        align-items: center;
       }
     }
   }

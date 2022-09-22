@@ -205,6 +205,19 @@ h2::after {
   }
 }
 
+@media (max-width: 1200px) {
+  .books .books__heading,
+.about .about__inner {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .books .books__heading,
+.about .about__inner {
+    padding-top: 70px;
+  }
+}
+
 h3 {
   font-size: 32px;
   line-height: 38px;
@@ -648,8 +661,8 @@ h5 {
   }
 }
 @media (max-width: 920px) {
-  .books__heading {
-    padding-top: 84px;
+  .books__inner {
+    padding-bottom: 100px;
   }
 }
 @media (max-width: 768px) {
@@ -785,6 +798,102 @@ h5 {
   letter-spacing: 0.19px;
 }
 
+@media (max-width: 1400px) {
+  .about__img-wrapper {
+    width: clamp(14.688rem, -22.448rem + 64.58vw, 34.063rem);
+    height: clamp(17.5rem, -25.625rem + 75vw, 40rem);
+  }
+  .about__img-wrapper img {
+    top: -41px;
+    left: 50px;
+  }
+}
+@media (max-width: 1200px) {
+  .about__inner {
+    gap: 77px;
+  }
+  .about__img-wrapper {
+    border: 7px solid #FFCA42;
+  }
+  .about__img-wrapper img {
+    top: -30px;
+    left: 27px;
+  }
+}
+@media (max-width: 920px) {
+  .about__inner {
+    display: block;
+    position: relative;
+    padding-bottom: 70px;
+  }
+  .about__img-wrapper {
+    position: absolute;
+    top: 21%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .about__content {
+    align-items: center;
+    height: auto;
+  }
+  .about__content-heading {
+    margin-bottom: 335px;
+  }
+  .about__content-heading::after {
+    left: 48%;
+  }
+}
+@media (max-width: 768px) {
+  .about__img-wrapper {
+    top: 18%;
+  }
+  .about__content-txt {
+    text-align: center;
+  }
+  .about__content-items {
+    padding-left: 0;
+    text-align: center;
+    align-items: flex-start;
+  }
+  .about__content-items .item {
+    align-items: flex-start;
+    max-width: 90px;
+    min-height: 140px;
+    padding-left: 0px;
+    border: 0;
+  }
+  .about__content-items .item:first-child {
+    padding: 0;
+  }
+  .about__content-items .item:last-child {
+    padding-left: 0px;
+  }
+  .about__content-items .item__number {
+    font-size: clamp(2.438rem, 1.768rem + 3.35vw, 3.375rem);
+  }
+  .about__content-items .item__achievements {
+    font-size: clamp(0.875rem, 0.741rem + 0.67vw, 1.063rem);
+  }
+}
+@media (max-width: 540px) {
+  .about__img-wrapper {
+    top: 14%;
+    border: 0;
+  }
+  .about__img-wrapper img {
+    top: 0;
+    left: 0;
+  }
+  .about .fast-response {
+    height: auto;
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+  .about .fast-response__info {
+    align-items: center;
+  }
+}
 .partnership__heading {
   padding-top: 126px;
 }

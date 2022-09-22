@@ -66,8 +66,8 @@
   }
 }
 @include desktop {
-  .books__heading {
-    padding-top: 84px;
+  .books__inner {
+    padding-bottom: 100px ;
   }
 }
 @include tablet {

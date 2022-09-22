@@ -57,6 +57,15 @@ h2 {
     }
   }
 }
+.books .books__heading,
+.about .about__inner{
+  @include wide-screen{
+    padding-top: 100px;
+  }
+  @include tablet{
+    padding-top: 70px;
+  }
+}
 
 h3 {
   @extend %heading-font-weight;
@@ -73,6 +82,7 @@ h5 {
   @extend %heading-font-weight;
   font-size: 22px;
 }
+
 .btn-with-bg {
   @extend %heading-font-weight;
   @extend %btn-txt;
