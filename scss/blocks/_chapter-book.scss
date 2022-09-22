@@ -1,0 +1,119 @@
+.chapter-books {
+  background: $light-blue-bg;
+  &__heading {
+    padding-top: 117px;
+  }
+  &__inner {
+    padding: 69px 0;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 40px 30px;
+  }
+  .card {
+    background: $wight;
+    padding: 42px 52px 44px 40px;
+    &__title {
+      line-height: 29px;
+      color: $main;
+    }
+    &__txt {
+      line-height: 32px;
+      padding: 20px 0 11px;
+      max-width: 533px;
+    }
+    &__info {
+      @include flex(row, flex-start);
+      gap: 48px;
+      li {
+        @include flex(row, flex-start);
+        gap: 17px;
+        h5 {
+          line-height: 31px;
+          color: $main;
+          @extend %custom-list-style;
+        }
+        span {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+  &__btn {
+    display: block;
+    max-width: 429px;
+    margin: 0 auto;
+    padding: 24px 89px 23px 80px;
+    span {
+      letter-spacing: 0.57px;
+    }
+  }
+  &__help {
+    font-size: 18px;
+    max-width: 340px;
+    text-align: center;
+    line-height: 28px;
+    margin: 0 auto;
+    padding: 34px 0 130px;
+    &-link {
+      span {
+        color: $main;
+        letter-spacing: 0.19px;
+        transition: all 0.5s ease;
+        &:hover {
+          color: $accent;
+          border-bottom: 1px solid $accent;
+        }
+      }
+    }
+  }
+}
+
+@include wide-screen {
+  .chapter-books .card__info {
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+  }
+}
+@include desktop {
+  .chapter-books {
+    &__inner {
+      padding: 50px 0;
+    }
+    .card {
+      padding: 42px 40px;
+      &__title {
+        margin: 0 auto;
+        max-width: 280px;
+        min-height: 57px;
+        text-align: center;
+        font-size: clamp(1.25rem, -0.013rem + 2.63vw, 1.5rem);
+        &:nth-child(1) {
+          max-width: 230px;
+        }
+      }
+      &__txt {
+        min-height: 170px;
+        text-align: center;
+      }
+    }
+    &__help {
+      padding-bottom: 70px;
+    }
+  }
+}
+@include tablet {
+  .chapter-books {
+    &__inner {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+    .card {
+      max-width: 375px;
+    }
+    &__btn {
+      max-width: 375px;
+      padding: 24px 0;
+    }
+  }
+}

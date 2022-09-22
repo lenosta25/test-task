@@ -101,7 +101,7 @@ label {
   font-weight: 400;
 }
 
-.footer .socials, .acquired-skills__inner, .get-book__info, .get-book__container, .partnership .company, .partnership__inner, .about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .header .nav__list, .header .socials, .header__inner {
+.footer .socials, .chapter-books .card__info li, .chapter-books .card__info, .acquired-skills__inner, .get-book__info, .get-book__container, .partnership .company, .partnership__inner, .about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .header .nav__list, .header .socials, .header__inner {
   display: flex;
   align-items: center;
 }
@@ -121,11 +121,11 @@ label {
   transition: all 0.7s ease;
 }
 
-.books .book__content-view, .banner__content .list__item {
+.chapter-books .card__info li h5, .books .book__content-view, .banner__content .list__item {
   position: relative;
   padding-left: 26px;
 }
-.books .book__content-view::before, .banner__content .list__item::before {
+.chapter-books .card__info li h5::before, .books .book__content-view::before, .banner__content .list__item::before {
   position: absolute;
   content: "";
   width: 16px;
@@ -218,7 +218,8 @@ h2::after {
   .books .books__heading,
 .about .about__inner,
 .partnership .partnership__heading,
-.acquired-skills .acquired-skills__heading {
+.acquired-skills .acquired-skills__heading,
+.chapter-books .chapter-books__heading {
     padding-top: 100px;
   }
 }
@@ -226,7 +227,8 @@ h2::after {
   .books .books__heading,
 .about .about__inner,
 .partnership .partnership__heading,
-.acquired-skills .acquired-skills__heading {
+.acquired-skills .acquired-skills__heading,
+.chapter-books .chapter-books__heading {
     padding-top: 70px;
   }
 }
@@ -1076,6 +1078,120 @@ h5 {
   .acquired-skills__img-wrapper img {
     top: 0;
     left: 0;
+  }
+}
+.chapter-books {
+  background: #F4F8FF;
+}
+.chapter-books__heading {
+  padding-top: 117px;
+}
+.chapter-books__inner {
+  padding: 69px 0;
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+  gap: 40px 30px;
+}
+.chapter-books .card {
+  background: #FFFFFF;
+  padding: 42px 52px 44px 40px;
+}
+.chapter-books .card__title {
+  line-height: 29px;
+  color: #1B3764;
+}
+.chapter-books .card__txt {
+  line-height: 32px;
+  padding: 20px 0 11px;
+  max-width: 533px;
+}
+.chapter-books .card__info {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 48px;
+}
+.chapter-books .card__info li {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 17px;
+}
+.chapter-books .card__info li h5 {
+  line-height: 31px;
+  color: #1B3764;
+}
+.chapter-books .card__info li span {
+  font-size: 17px;
+}
+.chapter-books__btn {
+  display: block;
+  max-width: 429px;
+  margin: 0 auto;
+  padding: 24px 89px 23px 80px;
+}
+.chapter-books__btn span {
+  letter-spacing: 0.57px;
+}
+.chapter-books__help {
+  font-size: 18px;
+  max-width: 340px;
+  text-align: center;
+  line-height: 28px;
+  margin: 0 auto;
+  padding: 34px 0 130px;
+}
+.chapter-books__help-link span {
+  color: #1B3764;
+  letter-spacing: 0.19px;
+  transition: all 0.5s ease;
+}
+.chapter-books__help-link span:hover {
+  color: #FFCA42;
+  border-bottom: 1px solid #FFCA42;
+}
+
+@media (max-width: 1200px) {
+  .chapter-books .card__info {
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 920px) {
+  .chapter-books__inner {
+    padding: 50px 0;
+  }
+  .chapter-books .card {
+    padding: 42px 40px;
+  }
+  .chapter-books .card__title {
+    margin: 0 auto;
+    max-width: 280px;
+    min-height: 57px;
+    text-align: center;
+    font-size: clamp(1.25rem, -0.013rem + 2.63vw, 1.5rem);
+  }
+  .chapter-books .card__title:nth-child(1) {
+    max-width: 230px;
+  }
+  .chapter-books .card__txt {
+    min-height: 170px;
+    text-align: center;
+  }
+  .chapter-books__help {
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .chapter-books__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .chapter-books .card {
+    max-width: 375px;
+  }
+  .chapter-books__btn {
+    max-width: 375px;
+    padding: 24px 0;
   }
 }
 .footer {
