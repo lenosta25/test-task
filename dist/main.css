@@ -96,12 +96,12 @@ label {
   cursor: pointer;
 }
 
-.about__content-items .item__number, .banner__content-btns .btn-link, .banner__content-greetings, .btn-with-border, .btn-with-bg, h5, h4, h3, h2, h1 {
+.acquired-skills__items .item, .about__content-items .item__number, .banner__content-btns .btn-link, .banner__content-greetings, .btn-with-border, .btn-with-bg, h5, h4, h3, h2, h1 {
   font-family: "Cardo", serif;
   font-weight: 400;
 }
 
-.footer .socials, .get-book__info, .get-book__container, .partnership .company, .partnership__inner, .about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .header .nav__list, .header .socials, .header__inner {
+.footer .socials, .acquired-skills__inner, .get-book__info, .get-book__container, .partnership .company, .partnership__inner, .about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .header .nav__list, .header .socials, .header__inner {
   display: flex;
   align-items: center;
 }
@@ -135,6 +135,15 @@ label {
   top: 7px;
   background: #FFCA42;
   z-index: 10;
+}
+
+.acquired-skills__img-wrapper, .about__img-wrapper {
+  border: 10px solid #FFCA42;
+  position: relative;
+}
+.acquired-skills__img-wrapper img, .about__img-wrapper img {
+  position: absolute;
+  box-shadow: 0px 0px 20px rgba(27, 55, 100, 0.3);
 }
 
 [class*=__container] {
@@ -208,14 +217,16 @@ h2::after {
 @media (max-width: 1200px) {
   .books .books__heading,
 .about .about__inner,
-.partnership .partnership__heading {
+.partnership .partnership__heading,
+.acquired-skills .acquired-skills__heading {
     padding-top: 100px;
   }
 }
 @media (max-width: 768px) {
   .books .books__heading,
 .about .about__inner,
-.partnership .partnership__heading {
+.partnership .partnership__heading,
+.acquired-skills .acquired-skills__heading {
     padding-top: 70px;
   }
 }
@@ -693,16 +704,12 @@ h5 {
   gap: 151px;
 }
 .about__img-wrapper {
-  border: 10px solid #FFCA42;
-  position: relative;
   width: 545px;
   height: 640px;
 }
 .about__img-wrapper img {
-  position: absolute;
   top: -41px;
   left: -40px;
-  box-shadow: 0px 0px 20px rgba(27, 55, 100, 0.3);
 }
 .about__content {
   flex-direction: column;
@@ -857,7 +864,7 @@ h5 {
     font-size: clamp(0.875rem, 0.741rem + 0.67vw, 1.063rem);
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 545px) {
   .about__img-wrapper {
     top: 14%;
     border: 0;
@@ -982,6 +989,93 @@ h5 {
     left: 15px;
     margin: auto;
     max-width: 350px;
+  }
+}
+.acquired-skills__heading {
+  padding-top: 136px;
+}
+.acquired-skills__inner {
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 90px 0 140px;
+  gap: 109px;
+}
+.acquired-skills__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+}
+.acquired-skills__items .item {
+  max-width: 330px;
+  min-height: 272px;
+  background: #F4F8FF;
+  color: #1B3764;
+  padding: 19px 37px 27px 30px;
+}
+.acquired-skills__items .item__numbering {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #FFCA42;
+  font-size: 23px;
+  line-height: 50px;
+  text-align: center;
+}
+.acquired-skills__items .item__txt {
+  font-size: 24px;
+  line-height: 34px;
+  margin-top: 31px;
+}
+.acquired-skills__items .item__txt:nth-child(2) {
+  max-width: 236px;
+}
+.acquired-skills__items .item__txt:nth-child(3) {
+  width: 216px;
+}
+.acquired-skills__items .item__txt:nth-child(4) {
+  width: 223px;
+}
+.acquired-skills__img-wrapper {
+  width: 555px;
+  height: 650px;
+}
+.acquired-skills__img-wrapper img {
+  top: -31px;
+  left: -31px;
+}
+
+@media (max-width: 1400px) {
+  .acquired-skills__img-wrapper {
+    width: clamp(14.688rem, -22.448rem + 64.58vw, 34.063rem);
+    height: clamp(17.5rem, -25.625rem + 75vw, 40rem);
+  }
+}
+@media (max-width: 1200px) {
+  .acquired-skills__inner {
+    gap: 77px;
+  }
+  .acquired-skills__img-wrapper {
+    border: 7px solid #FFCA42;
+  }
+}
+@media (max-width: 920px) {
+  .acquired-skills__inner {
+    flex-direction: column-reverse;
+    padding: 50px 0 70px;
+    gap: 50px;
+  }
+}
+@media (max-width: 545px) {
+  .acquired-skills__items {
+    grid-template-columns: 1fr;
+  }
+  .acquired-skills__img-wrapper {
+    border: 0;
+  }
+  .acquired-skills__img-wrapper img {
+    top: 0;
+    left: 0;
   }
 }
 .footer {

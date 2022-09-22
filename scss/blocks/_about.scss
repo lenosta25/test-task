@@ -6,16 +6,7 @@
     gap: 151px;
   }
   &__img-wrapper {
-    border: 10px solid $accent;
-    position: relative;
-    width: 545px;
-    height: 640px;
-    img {
-      position: absolute;
-      top: -41px;
-      left: -40px;
-      box-shadow: $shadow-for-photos;
-    }
+    @include photo-border-style (545px, 640px, -41px, -40px);
   }
   &__content {
     @include flex(column, flex-start);
@@ -93,6 +84,7 @@
     }
   }
 }
+// Media
 @media (max-width: 1400px) {
   .about__img-wrapper {
     width: clamp(14.688rem, -22.448rem + 64.58vw, 34.063rem);
@@ -179,7 +171,7 @@
     }
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 545px) {
   .about {
     &__img-wrapper {
       top: 14%;

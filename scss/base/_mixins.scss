@@ -39,3 +39,13 @@
   -webkit-box-shadow: $x-offset $y-offset $blur $size rgba(0, 0, 0, $opacity);
   box-shadow: $x-offset $y-offset $blur $size rgba(0, 0, 0, $opacity);
 }
+
+@mixin photo-border-style($width-br, $height-br, $top, $left) {
+  @extend %photo-border-style;
+  width: $width-br;
+  height: $height-br;
+  img{
+    top: $top;
+    left: $left;
+  }
+}

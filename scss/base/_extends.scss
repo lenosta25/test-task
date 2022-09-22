@@ -5,8 +5,8 @@
 %flex {
   display: flex;
   align-items: center;
-  //   flex-wrap: wrap;
 }
+
 %btn-txt {
   font-size: 19px;
   line-height: 28px;
@@ -35,5 +35,14 @@
     top: 7px;
     background: $accent;
     z-index: 10;
+  }
+}
+
+%photo-border-style {
+  border: 10px solid $accent;
+  position: relative;
+  img {
+    position: absolute;
+    box-shadow: $shadow-for-photos;
   }
 }
