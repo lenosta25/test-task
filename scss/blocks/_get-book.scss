@@ -1,0 +1,70 @@
+.get-book {
+  background: $main;
+  &__container {
+    padding: 70px 15px;
+    @include flex(row, space-between);
+  }
+  &__info {
+    @include flex(column, flex-start);
+    align-items: flex-start;
+    max-width: 539px;
+    height: 258px;
+    &-heading {
+      font-size: clamp(1.75rem, 1.446rem + 1.52vw, 2.813rem);
+      color: $wight;
+      padding-top: 5px;
+      &::after {
+        left: 0;
+      }
+    }
+    &-txt {
+      line-height: 28px;
+      color: $secondary-color-txt;
+      padding: 28px 0 26px;
+    }
+    &-btn {
+      padding: 17px 53px;
+      letter-spacing: 0.38px;
+      line-height: 29px;
+      span {
+        color: $wight;
+      }
+      &:hover {
+        span {
+          color: $main;
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  .get-book {
+    &__container {
+      position: relative;
+      display: block;
+    }
+    &__info {
+      height: auto;
+      text-align: center;
+      margin: 0 auto;
+      &-heading {
+        margin: 0 auto;
+        margin-bottom: 300px;
+        &::after {
+          left: 44%;
+        }
+      }
+      &-btn {
+        margin: 0 auto;
+      }
+    }
+    &__img-wrapper {
+      position: absolute;
+      top: 27%;
+      right: 15px;
+      left: 15px;
+      margin: auto;
+      max-width: 350px;
+    }
+  }
+}
