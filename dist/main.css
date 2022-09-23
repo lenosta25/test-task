@@ -96,12 +96,12 @@ label {
   cursor: pointer;
 }
 
-.acquired-skills__items .item, .about__content-items .item__number, .banner__content-btns .btn-link, .banner__content-greetings, .btn-with-border, .btn-with-bg, h5, h4, h3, h2, h1 {
+.reader-reviews .rating__item-txt, .acquired-skills__items .item, .about__content-items .item__number, .banner__content-btns .btn-link, .banner__content-greetings, .btn-with-border, .btn-with-bg, h5, h4, h3, h2, h1 {
   font-family: "Cardo", serif;
   font-weight: 400;
 }
 
-.footer .socials, .chapter-books .card__info li, .chapter-books .card__info, .acquired-skills__inner, .get-book__info, .get-book__container, .partnership .company, .partnership__inner, .about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .header .nav__list, .header .socials, .header__inner {
+.footer .socials, .reader-reviews__comments .user-comment__header, .reader-reviews__container, .chapter-books .card__info li, .chapter-books .card__info, .acquired-skills__inner, .get-book__info, .get-book__container, .partnership .company, .partnership__inner, .about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .header .nav__list, .header .socials, .header__inner, .rating {
   display: flex;
   align-items: center;
 }
@@ -219,7 +219,8 @@ h2::after {
 .about .about__inner,
 .partnership .partnership__heading,
 .acquired-skills .acquired-skills__heading,
-.chapter-books .chapter-books__heading {
+.chapter-books .chapter-books__heading,
+.reader-reviews .reader-reviews__container {
     padding-top: 100px;
   }
 }
@@ -228,7 +229,8 @@ h2::after {
 .about .about__inner,
 .partnership .partnership__heading,
 .acquired-skills .acquired-skills__heading,
-.chapter-books .chapter-books__heading {
+.chapter-books .chapter-books__heading,
+.reader-reviews .reader-reviews__container {
     padding-top: 70px;
   }
 }
@@ -269,6 +271,31 @@ h5 {
 }
 .btn-with-border:hover {
   transform: scale(1.05);
+  background: #FFCA42;
+}
+
+.rating {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.rating__item {
+  border-radius: 50%;
+  background: #FFCA42;
+  border: 1px solid #FFCA42;
+}
+.rating__item:nth-child(5) {
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.rating__item:nth-child(5) span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 50% 0 0 50%;
   background: #FFCA42;
 }
 
@@ -1192,6 +1219,153 @@ h5 {
   .chapter-books__btn {
     max-width: 375px;
     padding: 24px 0;
+  }
+}
+.reader-reviews__container {
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 130px 15px 150px;
+  gap: clamp(1.25rem, -12.188rem + 17.92vw, 3.938rem);
+}
+.reader-reviews__description {
+  max-width: 435px;
+  height: 420px;
+}
+.reader-reviews__description-heading {
+  max-width: 339px;
+  text-align: start;
+  padding-top: 9px;
+}
+.reader-reviews__description-heading::after {
+  left: 0;
+}
+.reader-reviews__description-txt {
+  line-height: 34.2px;
+  padding: 33px 0 23px;
+}
+.reader-reviews__description-signature {
+  color: #1B3764;
+  font-size: 18px;
+  line-height: 28px;
+  padding-top: 13px;
+}
+.reader-reviews .rating {
+  gap: 5px;
+}
+.reader-reviews .rating__item {
+  width: 20px;
+  height: 20px;
+}
+.reader-reviews .rating__item-txt {
+  font-size: 22px;
+  line-height: 23.4px;
+  color: #1B3764;
+  padding-left: 6px;
+}
+.reader-reviews__comments {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+  gap: 20px;
+}
+.reader-reviews__comments .user-comment {
+  box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.11);
+  max-width: 381px;
+  min-height: 292px;
+  background: #1B3764;
+  padding: 30px 55px 24px 35px;
+}
+.reader-reviews__comments .user-comment__header {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.reader-reviews__comments .user-comment__header h4 {
+  color: #FFFFFF;
+  line-height: 52.8px;
+}
+.reader-reviews__comments .user-comment__header-photo img {
+  border-radius: 50%;
+}
+.reader-reviews__comments .user-comment__header-about h4 {
+  font-size: clamp(1.25rem, 1.67vw, 1.5rem);
+}
+.reader-reviews__comments .user-comment__header-about .rating {
+  padding-top: 2px;
+  gap: 3.17px;
+}
+.reader-reviews__comments .user-comment__header-about .rating__item {
+  width: 12.67px;
+  height: 12.67px;
+}
+.reader-reviews__comments .user-comment__name-book {
+  font-size: clamp(1.125rem, -0.125rem + 1.67vw, 1.375rem);
+  color: #FFFFFF;
+  padding: 20px 0 13px;
+  line-height: 33px;
+}
+.reader-reviews__comments .user-comment__txt {
+  font-size: 18px;
+  line-height: 29px;
+  color: #B4C7E7;
+}
+.reader-reviews__comments .user-comment:nth-child(2) {
+  margin-top: 156px;
+  height: 292px;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 1;
+}
+
+@media (max-width: 1200px) {
+  .reader-reviews__container {
+    display: block;
+    position: relative;
+    max-width: 782px;
+  }
+  .reader-reviews__description {
+    max-width: 782px;
+    margin: 0 auto;
+  }
+  .reader-reviews__description h2 {
+    max-width: 782px;
+    text-align: center;
+    margin-bottom: 616px;
+  }
+  .reader-reviews__description h2::after {
+    left: 48%;
+  }
+  .reader-reviews__description-txt {
+    text-align: center;
+  }
+  .reader-reviews__comments {
+    position: absolute;
+    top: 30%;
+    left: 15px;
+    right: 15px;
+    margin: auto;
+  }
+}
+@media (max-width: 920px) {
+  .reader-reviews__description h2 {
+    margin-bottom: 945px;
+  }
+  .reader-reviews__comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .reader-reviews__comments .user-comment {
+    padding: 24px;
+  }
+  .reader-reviews__comments .user-comment:nth-child(2) {
+    margin-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  .reader-reviews__comments {
+    top: 35%;
   }
 }
 .footer {

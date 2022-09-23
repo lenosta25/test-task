@@ -4,6 +4,7 @@
   flex-direction: $flex-direction;
   justify-content: $justify-content;
 }
+
 // pseudo
 @mixin pseudo($width,$height,$color-bg){
   position: absolute;
@@ -39,7 +40,7 @@
   -webkit-box-shadow: $x-offset $y-offset $blur $size rgba(0, 0, 0, $opacity);
   box-shadow: $x-offset $y-offset $blur $size rgba(0, 0, 0, $opacity);
 }
-
+// photo-border-style
 @mixin photo-border-style($width-br, $height-br, $top, $left) {
   @extend %photo-border-style;
   width: $width-br;
@@ -48,4 +49,9 @@
     top: $top;
     left: $left;
   }
+}
+// rating-circle-size
+@mixin rating-circle-size($width, $height) {
+  width: $width;
+  height: $height;
 }
