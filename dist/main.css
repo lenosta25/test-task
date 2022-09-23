@@ -96,12 +96,12 @@ label {
   cursor: pointer;
 }
 
-.reader-reviews .rating__item-txt, .acquired-skills__items .item, .about__content-items .item__number, .banner__content-btns .btn-link, .banner__content-greetings, .btn-with-border, .btn-with-bg, h5, h4, h3, h2, h1 {
+.articles .slide__content-footer a, .reader-reviews .rating__item-txt, .acquired-skills__items .item, .about__content-items .item__number, .banner__content-btns .btn-link, .banner__content-greetings, .btn-with-border, .btn-with-bg, h5, h4, h3, h2, h1 {
   font-family: "Cardo", serif;
   font-weight: 400;
 }
 
-.footer .socials, .reader-reviews__comments-wrapper .user-comment__header, .reader-reviews__inner, .chapter-books .card__info li, .chapter-books .card__info, .acquired-skills__inner, .get-book__info, .get-book__container, .partnership .company, .partnership__inner, .about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .header .nav__list, .header .socials, .header__inner, .rating {
+.footer .socials, .articles .slide__content-footer, .reader-reviews__comments-wrapper .user-comment__header, .reader-reviews__inner, .chapter-books .card__info li, .chapter-books .card__info, .acquired-skills__inner, .get-book__info, .get-book__container, .partnership .company, .partnership__inner, .about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .header .nav__list, .header .socials, .header__inner, .rating {
   display: flex;
   align-items: center;
 }
@@ -1390,6 +1390,129 @@ h5 {
   }
   .reader-reviews__comments .user-comment__txt {
     font-size: 16px;
+  }
+}
+.articles {
+  background: #F4F8FF;
+}
+.articles__heading {
+  padding-top: 126px;
+}
+.articles__inner {
+  padding: 70px 0 150px;
+}
+.articles .slider {
+  overflow: hidden;
+  width: 100%;
+}
+.articles .slider-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.articles .slide {
+  flex-shrink: 0;
+  max-width: 420px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.articles .slide__img-wrapper img {
+  border-radius: 5px 5px 0 0;
+}
+.articles .slide__content {
+  padding: 25px 30px 27.66px 30px;
+}
+.articles .slide__content-title {
+  color: #1B3764;
+  max-width: 325px;
+}
+.articles .slide__content-txt {
+  padding: 19px 0 11px;
+  line-height: 30.4px;
+}
+.articles .slide__content-footer {
+  flex-direction: row;
+  justify-content: space-between;
+  color: #1B3764;
+}
+.articles .slide__content-footer a {
+  font-size: 19px;
+  border-bottom: 2px solid #1B3764;
+  transition: all 0.5s ease;
+}
+.articles .slide__content-footer a:hover {
+  color: #FFCA42;
+  border-color: #FFCA42;
+}
+.articles .slide__content-footer p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.subscription__inner {
+  margin: 120px 0;
+  background: #FFCA42;
+  padding: 0 15px;
+}
+.subscription__heading {
+  padding-top: 99px;
+}
+.subscription__heading::after {
+  background: #1B3764;
+}
+.subscription__txt {
+  margin: 0 auto;
+  max-width: 550px;
+  font-size: 18px;
+  line-height: 28.5px;
+  text-align: center;
+  color: #1B3764;
+  padding: 25px 0 46px;
+}
+.subscription__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 115px;
+}
+.subscription__form-input {
+  width: 656px;
+  min-height: 72px;
+  padding: 19px 20px 19px 38px;
+  background: #FFFFFF;
+  border: 1px solid #dce1e9;
+  font-size: 18px;
+}
+.subscription__form-btn {
+  max-width: 328px;
+  min-height: 68px;
+  background: #1B3764;
+  color: #FFFFFF;
+  font-size: 19px;
+  letter-spacing: 1.3px;
+  line-height: 31px;
+  padding: 20px clamp(1.875rem, -7.966rem + 17.12vw, 7.438rem) 18px;
+}
+
+@media (max-width: 920px) {
+  .subscription__form-btn {
+    padding: 20px 30px 18px 30px;
+  }
+}
+@media (max-width: 768px) {
+  .subscription__inner {
+    margin: 70px 0;
+  }
+  .subscription__heading {
+    padding-top: 50px;
+  }
+  .subscription__form {
+    flex-direction: column;
+    padding: 0 30px 50px 30px;
+  }
+  .subscription__form-input {
+    width: 100%;
   }
 }
 .footer {

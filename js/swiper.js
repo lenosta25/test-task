@@ -1,3 +1,4 @@
+// swiper for section REVIEWS READERS
 window.addEventListener("resize", () => {
   const mql = window.matchMedia("(max-width: 920px)");
   const swiper = document.querySelector(".reader-reviews__comments");
@@ -32,3 +33,18 @@ window.addEventListener("resize", () => {
     });
   }
 });
+
+
+// swiper for section ARTICLES
+// let slider = document.querySelector('#slider');
+// console.log(slider);
+// const mySlide = new Swiper( '.slider', {
+//   slideClass: 'slide',
+//   wrepperClass: 'slider-wrapper',
+//   direction: "horizontal",
+//   centeredSlides: true,
+//   loop: true,
+//   slidesPerView: 3,
+//   spaceBetween: 20,
+  
+// })
