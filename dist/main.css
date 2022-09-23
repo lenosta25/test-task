@@ -101,7 +101,7 @@ label {
   font-weight: 400;
 }
 
-.footer .socials, .reader-reviews__comments .user-comment__header, .reader-reviews__container, .chapter-books .card__info li, .chapter-books .card__info, .acquired-skills__inner, .get-book__info, .get-book__container, .partnership .company, .partnership__inner, .about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .header .nav__list, .header .socials, .header__inner, .rating {
+.footer .socials, .reader-reviews__comments-wrapper .user-comment__header, .reader-reviews__inner, .chapter-books .card__info li, .chapter-books .card__info, .acquired-skills__inner, .get-book__info, .get-book__container, .partnership .company, .partnership__inner, .about__content .fast-response__info, .about__content .fast-response, .about__content-items, .about__content, .about__inner, .books .book__content, .books .book, .books__inner, .banner__content .list, .banner__content-btns, .banner__inner, .header .nav__list, .header .socials, .header__inner, .rating {
   display: flex;
   align-items: center;
 }
@@ -210,7 +210,7 @@ h2::after {
     padding-bottom: 10px;
   }
   h2::after {
-    left: 44%;
+    left: 43%;
   }
 }
 
@@ -220,7 +220,7 @@ h2::after {
 .partnership .partnership__heading,
 .acquired-skills .acquired-skills__heading,
 .chapter-books .chapter-books__heading,
-.reader-reviews .reader-reviews__container {
+.reader-reviews .reader-reviews__inner {
     padding-top: 100px;
   }
 }
@@ -230,7 +230,7 @@ h2::after {
 .partnership .partnership__heading,
 .acquired-skills .acquired-skills__heading,
 .chapter-books .chapter-books__heading,
-.reader-reviews .reader-reviews__container {
+.reader-reviews .reader-reviews__inner {
     padding-top: 70px;
   }
 }
@@ -1221,10 +1221,10 @@ h5 {
     padding: 24px 0;
   }
 }
-.reader-reviews__container {
+.reader-reviews__inner {
   flex-direction: row;
   justify-content: flex-start;
-  padding: 130px 15px 150px;
+  padding: 130px 0 150px;
   gap: clamp(1.25rem, -12.188rem + 17.92vw, 3.938rem);
 }
 .reader-reviews__description {
@@ -1263,53 +1263,56 @@ h5 {
   padding-left: 6px;
 }
 .reader-reviews__comments {
+  height: auto;
+}
+.reader-reviews__comments-wrapper {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr;
   gap: 20px;
 }
-.reader-reviews__comments .user-comment {
+.reader-reviews__comments-wrapper .user-comment {
   box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.11);
   max-width: 381px;
   min-height: 292px;
   background: #1B3764;
   padding: 30px 55px 24px 35px;
 }
-.reader-reviews__comments .user-comment__header {
+.reader-reviews__comments-wrapper .user-comment__header {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
 }
-.reader-reviews__comments .user-comment__header h4 {
+.reader-reviews__comments-wrapper .user-comment__header h4 {
   color: #FFFFFF;
   line-height: 52.8px;
 }
-.reader-reviews__comments .user-comment__header-photo img {
+.reader-reviews__comments-wrapper .user-comment__header-photo img {
   border-radius: 50%;
 }
-.reader-reviews__comments .user-comment__header-about h4 {
+.reader-reviews__comments-wrapper .user-comment__header-about h4 {
   font-size: clamp(1.25rem, 1.67vw, 1.5rem);
 }
-.reader-reviews__comments .user-comment__header-about .rating {
+.reader-reviews__comments-wrapper .user-comment__header-about .rating {
   padding-top: 2px;
   gap: 3.17px;
 }
-.reader-reviews__comments .user-comment__header-about .rating__item {
+.reader-reviews__comments-wrapper .user-comment__header-about .rating__item {
   width: 12.67px;
   height: 12.67px;
 }
-.reader-reviews__comments .user-comment__name-book {
+.reader-reviews__comments-wrapper .user-comment__name-book {
   font-size: clamp(1.125rem, -0.125rem + 1.67vw, 1.375rem);
   color: #FFFFFF;
   padding: 20px 0 13px;
   line-height: 33px;
 }
-.reader-reviews__comments .user-comment__txt {
+.reader-reviews__comments-wrapper .user-comment__txt {
   font-size: 18px;
   line-height: 29px;
   color: #B4C7E7;
 }
-.reader-reviews__comments .user-comment:nth-child(2) {
+.reader-reviews__comments-wrapper .user-comment:nth-child(2) {
   margin-top: 156px;
   height: 292px;
   grid-column-start: 2;
@@ -1319,14 +1322,15 @@ h5 {
 }
 
 @media (max-width: 1200px) {
-  .reader-reviews__container {
-    display: block;
+  .reader-reviews__inner {
     position: relative;
     max-width: 782px;
+    height: 100%;
+    margin: 0 auto;
   }
   .reader-reviews__description {
     max-width: 782px;
-    margin: 0 auto;
+    height: auto;
   }
   .reader-reviews__description h2 {
     max-width: 782px;
@@ -1339,33 +1343,53 @@ h5 {
   .reader-reviews__description-txt {
     text-align: center;
   }
+  .reader-reviews__description .rating {
+    justify-content: center;
+  }
+  .reader-reviews__description-signature {
+    text-align: center;
+  }
   .reader-reviews__comments {
     position: absolute;
-    top: 30%;
+    top: 18%;
     left: 15px;
     right: 15px;
     margin: auto;
   }
 }
 @media (max-width: 920px) {
+  .reader-reviews__inner {
+    padding-bottom: 50px;
+  }
   .reader-reviews__description h2 {
-    margin-bottom: 945px;
+    margin-bottom: 350px;
   }
   .reader-reviews__comments {
+    max-width: 400px;
+    top: 26%;
+  }
+  .reader-reviews__comments-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
   }
-  .reader-reviews__comments .user-comment {
-    padding: 24px;
+  .reader-reviews__comments-wrapper .user-comment {
+    padding: 17px;
   }
-  .reader-reviews__comments .user-comment:nth-child(2) {
+  .reader-reviews__comments-wrapper .user-comment:nth-child(2) {
     margin-top: 0;
   }
 }
 @media (max-width: 480px) {
+  .reader-reviews__description h2::after {
+    left: 43%;
+  }
   .reader-reviews__comments {
-    top: 35%;
+    top: 23%;
+  }
+  .reader-reviews__comments .user-comment__header h4 {
+    font-size: 18px;
+  }
+  .reader-reviews__comments .user-comment__txt {
+    font-size: 16px;
   }
 }
 .footer {

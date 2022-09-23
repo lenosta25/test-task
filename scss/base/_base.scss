@@ -53,7 +53,7 @@ h2 {
   @include mobile {
     padding-bottom: 10px;
     &::after {
-      left: 44%;
+      left: 43%;
     }
   }
 }
@@ -63,7 +63,7 @@ h2 {
 .partnership .partnership__heading,
 .acquired-skills .acquired-skills__heading,
 .chapter-books .chapter-books__heading,
-.reader-reviews .reader-reviews__container {
+.reader-reviews .reader-reviews__inner {
   @include wide-screen {
     padding-top: 100px;
   }

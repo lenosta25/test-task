@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    /> -->
+    />
     <link rel="stylesheet" href="./dist/icons.css" />
     <link rel="stylesheet" href="./dist/main.css" />
     <title>Pages</title>
@@ -361,7 +361,8 @@
         </div>
       </section>
       <section class="reader-reviews">
-        <div class="reader-reviews__container swiper">
+        <div class="reader-reviews__container">
+          <div class="reader-reviews__inner">
           <div class="reader-reviews__description">
             <h2 class="reader-reviews__description-heading">
               Words From Our Readers
@@ -380,95 +381,102 @@
               <li class="rating__item"><span></span></li>
               <li class="rating__item-txt">(4.8/5)</li>
             </ul>
-            <p class="reader-reviews__description-signature">Overall Customer Ratings</p>
+            <p class="reader-reviews__description-signature">
+              Overall Customer Ratings
+            </p>
           </div>
-          <div class="reader-reviews__comments swiper-wrapper">
-            <!-- Comment -->
-            <article class="user-comment swiper-slide">
-              <div class="user-comment__header">
-                <div class="user-comment__header-photo">
-                  <img
-                    src="./images/user/user-james-williams.jpg"
-                    alt="user James Williams"
-                  />
+          <div class="reader-reviews__comments">
+            <div class="reader-reviews__comments-wrapper">
+              <!-- Comment -->
+              <article class="user-comment">
+                <div class="user-comment__header">
+                  <div class="user-comment__header-photo">
+                    <img
+                      src="./images/user/user-james-williams.jpg"
+                      alt="user James Williams"
+                    />
+                  </div>
+                  <div class="user-comment__header-about">
+                    <h4>James Williams</h4>
+                    <ul class="rating">
+                      <li class="rating__item"></li>
+                      <li class="rating__item"></li>
+                      <li class="rating__item"></li>
+                      <li class="rating__item"></li>
+                      <li class="rating__item"><span></span></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="user-comment__header-about">
-                  <h4>James Williams</h4>
-                  <ul class="rating">
-                    <li class="rating__item"></li>
-                    <li class="rating__item"></li>
-                    <li class="rating__item"></li>
-                    <li class="rating__item"></li>
-                    <li class="rating__item"><span></span></li>
-                  </ul>
+                <h5 class="user-comment__name-book">
+                  “ Great Books Collections ”
+                </h5>
+                <p class="user-comment__txt">
+                  I was searching this book for many years and I was happy that
+                  I could find it here.
+                </p>
+              </article>
+              <!-- Comment end -->
+              <!-- Comment -->
+              <article class="user-comment">
+                <div class="user-comment__header">
+                  <div class="user-comment__header-photo">
+                    <img
+                      src="./images/user/user-angeline-flora.jpg"
+                      alt="user Angeline Flora"
+                    />
+                  </div>
+                  <div class="user-comment__header-about">
+                    <h4>Angeline Flora</h4>
+                    <ul class="rating">
+                      <li class="rating__item"></li>
+                      <li class="rating__item"></li>
+                      <li class="rating__item"></li>
+                      <li class="rating__item"></li>
+                      <li class="rating__item"><span></span></li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <h5 class="user-comment__name-book">
-                “ Great Books Collections ”
-              </h5>
-              <p class="user-comment__txt">
-                I was searching this book for many years and I was happy that I
-                could find it here.
-              </p>
-            </article>
-            <!-- Comment end -->
-            <!-- Comment -->
-            <article class="user-comment swiper-slide">
-              <div class="user-comment__header">
-                <div class="user-comment__header-photo">
-                  <img
-                    src="./images/user/user-angeline-flora.jpg"
-                    alt="user Angeline Flora"
-                  />
+                <h5 class="user-comment__name-book">
+                  “ Creative Writing Skill”
+                </h5>
+                <p class="user-comment__txt">
+                  Sent an email after to books arrived to ask about the author &
+                  I received a reply.
+                </p>
+              </article>
+              <!-- Comment end -->
+              <!-- Comment -->
+              <article class="user-comment swiper-slide">
+                <div class="user-comment__header">
+                  <div class="user-comment__header-photo">
+                    <img
+                      src="./images/user/user-chris-adams.jpg"
+                      alt="user Chris Adams"
+                    />
+                  </div>
+                  <div class="user-comment__header-about">
+                    <h4>Chris Adams</h4>
+                    <ul class="rating">
+                      <li class="rating__item"></li>
+                      <li class="rating__item"></li>
+                      <li class="rating__item"></li>
+                      <li class="rating__item"></li>
+                      <li class="rating__item"></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="user-comment__header-about">
-                  <h4>Angeline Flora</h4>
-                  <ul class="rating">
-                    <li class="rating__item"></li>
-                    <li class="rating__item"></li>
-                    <li class="rating__item"></li>
-                    <li class="rating__item"></li>
-                    <li class="rating__item"><span></span></li>
-                  </ul>
-                </div>
-              </div>
-              <h5 class="user-comment__name-book">“ Creative Writing Skill”</h5>
-              <p class="user-comment__txt">
-                Sent an email after to books arrived to ask about the author & I
-                received a reply.
-              </p>
-            </article>
-            <!-- Comment end -->
-            <!-- Comment -->
-            <article class="user-comment swiper-slide">
-              <div class="user-comment__header">
-                <div class="user-comment__header-photo">
-                  <img
-                    src="./images/user/user-chris-adams.jpg"
-                    alt="user Chris Adams"
-                  />
-                </div>
-                <div class="user-comment__header-about">
-                  <h4>Chris Adams</h4>
-                  <ul class="rating">
-                    <li class="rating__item"></li>
-                    <li class="rating__item"></li>
-                    <li class="rating__item"></li>
-                    <li class="rating__item"></li>
-                    <li class="rating__item"></li>
-                  </ul>
-                </div>
-              </div>
-              <h5 class="user-comment__name-book">
-                “ Perfect Response Author”
-              </h5>
-              <p class="user-comment__txt">
-                I had a question about the book and the author response was
-                great & comfort.
-              </p>
-            </article>
-            <!-- Comment end -->
+                <h5 class="user-comment__name-book">
+                  “ Perfect Response Author”
+                </h5>
+                <p class="user-comment__txt">
+                  I had a question about the book and the author response was
+                  great & comfort.
+                </p>
+              </article>
+              <!-- Comment end -->
+            </div>
           </div>
+        </div>
         </div>
       </section>
     </main>
@@ -490,8 +498,10 @@
       </div>
     </div>
     </footer> -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <script src="./js/script.js"></script>
     <script src="./js/renderBooks.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
