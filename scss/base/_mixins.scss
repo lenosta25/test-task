@@ -15,6 +15,9 @@
 }
 // socials-icons
 @mixin socials(
+  $width-wrapper,
+  $height-wrapper,
+  $line-height,
   $size-border,
   $color-border,
   $color-bg,
@@ -24,6 +27,9 @@
   $hover-color-icon
 ){
   @extend %socials-wrapper;
+  width: $width-wrapper;
+  height: $height-wrapper;
+  line-height: $line-height;
   border: $size-border solid $color-border;
   background-color: $color-bg;
   color: $color-icon;

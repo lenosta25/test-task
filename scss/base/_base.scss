@@ -12,10 +12,10 @@ body {
   color: $basic-color-txt;
   background-color: $main-bg;
 
-  // height: 100vh;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 h1 {
@@ -86,6 +86,13 @@ h4 {
 h5 {
   @extend %heading-font-weight;
   font-size: 22px;
+}
+h6{
+  @extend %heading-font-weight;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.36px;
+  color: $wight;
 }
 
 .btn-with-bg {

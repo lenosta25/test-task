@@ -2,6 +2,12 @@
   font-family: $heading-font;
   font-weight: 400;
 }
+%hoverlink {
+  transition: all 0.7s ease 0s;
+  &:hover {
+    color: $accent;
+  }
+}
 %flex {
   display: flex;
   align-items: center;
@@ -15,10 +21,7 @@
 }
 
 %socials-wrapper {
-  width: 45px;
-  height: 45px;
   text-align: center;
-  line-height: 44px;
   transition: all 0.7s ease;
 }
 
@@ -36,6 +39,15 @@
     background: $accent;
     z-index: 10;
   }
+}
+%custom-list-style-mini {
+  content: "";
+  position: absolute;
+  top: 20px;
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  border: 1.5px solid $accent;
 }
 
 %photo-border-style {

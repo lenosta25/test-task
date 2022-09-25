@@ -14,6 +14,9 @@
     width: 359px;
     &__wrapper {
       @include socials(
+        45px,
+        45px,
+        45px,
         2px,
         $wight,
         $wight,
@@ -34,10 +37,7 @@
     }
     &__item-link {
       color: $additional-bg;
-      transition: all 0.7s ease;
-      &:hover {
-        color: $accent;
-      }
+      @extend %hoverlink;
     }
     .link-active {
       color: $accent;
