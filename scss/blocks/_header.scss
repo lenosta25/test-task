@@ -7,6 +7,7 @@
   }
   &__logo {
     width: 119px;
+    z-index: 30;
   }
   .socials {
     @include flex(row, flex-start);
@@ -36,6 +37,7 @@
       letter-spacing: 0.17px;
     }
     &__item-link {
+      font-size: 17px;
       color: $additional-bg;
       @extend %hoverlink;
     }
@@ -47,7 +49,6 @@
     width: 42px;
     font-size: 15px;
     text-align: center;
-
     i {
       color: $black;
       transition: all 0.7s ease;
@@ -100,6 +101,19 @@
       }
     }
   }
+  .blackout {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0; left: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    &._active{
+      display: block;
+    }
+  }
+ 
 }
 
 @include wide-screen {
@@ -114,20 +128,19 @@
     .nav {
       position: absolute;
       z-index: -1;
-      top: -400px;
       width: 100%;
       right: 0;
       overflow: auto;
       height: 400px;
       background-color: $main;
-      opacity: 0.7;
-      &__list{
-        flex-direction: column ;
+      &__list {
+        flex-direction: column;
         margin-top: 150px;
         z-index: 2;
       }
       &._active {
         top: 0;
+        z-index: 11;
       }
     }
     &__btn {
@@ -136,14 +149,14 @@
     }
     &__burger {
       display: block;
+      z-index: 11;
     }
   }
-
 }
-@include tablet{
- .header__btn{
-  display: none;
- }
+@include tablet {
+  .header__btn {
+    display: none;
+  }
 }
 // @include mobile{
 

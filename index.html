@@ -57,6 +57,7 @@
             <span></span>
           </div>
         </div>
+        <div class="blackout"></div>
       </div>
     </header>
     <main>
@@ -150,7 +151,7 @@
                     >
                   </p>
                   <p>
-                    Phone: <a href="tel:(+2) 123 545 9000">(+2) 123 545 9000</a>
+                    Phone: <a href="tel:(+2)1235459000">(+2) 123 545 9000</a>
                   </p>
                 </div>
               </div>
@@ -476,9 +477,9 @@
       <section class="articles">
         <div class="articles__container">
           <h2 class="articles__heading">Articles & Resources</h2>
-          <div class="articles__inner slider">
-            <div class="slider-wrapper">
-              <div class="slide">
+          <div class="articles__inner swiper">
+            <div class="swiper-wrapper">
+              <div class="slide swiper-slide">
                 <div class="slide__img-wrapper">
                   <img
                     src="./images/article-section/first-photo.png"
@@ -499,7 +500,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slide">
+              <div class="slide swiper-slide">
                 <div class="slide__img-wrapper">
                   <img
                     src="./images/article-section/second-photo.png"
@@ -520,7 +521,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slide">
+              <div class="slide swiper-slide">
                 <div class="slide__img-wrapper">
                   <img
                     src="./images/article-section/third-photo.png"
@@ -542,8 +543,8 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
@@ -633,7 +634,7 @@
               </li>
               <li class="item">
                 <h6>Phone :</h6>
-                <a href="tel:(+22) 123 - 4567 - 900">(+22) 123 - 4567 - 900</a>
+                <a href="tel:(+22)123-4567-900">(+22) 123 - 4567 - 900</a>
               </li>
             </ul>
           </div>
@@ -647,10 +648,10 @@
         </p>
       </div>
     </footer>
-
     <script src="./js/script.js"></script>
     <script src="./js/renderBooks.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/swiperArticles.js"></script>
   </body>
 </html>

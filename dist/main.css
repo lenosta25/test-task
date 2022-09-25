@@ -238,7 +238,8 @@ h2::after {
 .partnership .partnership__heading,
 .acquired-skills .acquired-skills__heading,
 .chapter-books .chapter-books__heading,
-.reader-reviews .reader-reviews__inner {
+.reader-reviews .reader-reviews__inner,
+.articles .articles__heading {
     padding-top: 100px;
   }
 }
@@ -248,7 +249,8 @@ h2::after {
 .partnership .partnership__heading,
 .acquired-skills .acquired-skills__heading,
 .chapter-books .chapter-books__heading,
-.reader-reviews .reader-reviews__inner {
+.reader-reviews .reader-reviews__inner,
+.articles .articles__heading {
     padding-top: 70px;
   }
 }
@@ -335,6 +337,7 @@ h6 {
 }
 .header__logo {
   width: 119px;
+  z-index: 30;
 }
 .header .socials {
   flex-direction: row;
@@ -366,6 +369,7 @@ h6 {
   letter-spacing: 0.17px;
 }
 .header .nav__item-link {
+  font-size: 17px;
   color: #F5F8FC;
 }
 .header .nav .link-active {
@@ -423,6 +427,19 @@ h6 {
   transform: rotate(45deg);
   bottom: calc(50% - 1px);
 }
+.header .blackout {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+.header .blackout._active {
+  display: block;
+}
 
 @media (max-width: 1200px) {
   .header .socials,
@@ -437,13 +454,11 @@ h6 {
   .header .nav {
     position: absolute;
     z-index: -1;
-    top: -400px;
     width: 100%;
     right: 0;
     overflow: auto;
     height: 400px;
     background-color: #1B3764;
-    opacity: 0.7;
   }
   .header .nav__list {
     flex-direction: column;
@@ -452,6 +467,7 @@ h6 {
   }
   .header .nav._active {
     top: 0;
+    z-index: 11;
   }
   .header__btn {
     position: absolute;
@@ -459,6 +475,7 @@ h6 {
   }
   .header__burger {
     display: block;
+    z-index: 11;
   }
 }
 @media (max-width: 768px) {
@@ -1424,15 +1441,8 @@ h6 {
 }
 .articles__inner {
   padding: 70px 0 150px;
-}
-.articles .slider {
-  overflow: hidden;
-  width: 100%;
-}
-.articles .slider-wrapper {
-  display: flex;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  z-index: 30;
 }
 .articles .slide {
   flex-shrink: 0;
@@ -1449,6 +1459,7 @@ h6 {
 .articles .slide__content-title {
   color: #1B3764;
   max-width: 325px;
+  letter-spacing: 0.24px;
 }
 .articles .slide__content-txt {
   padding: 19px 0 11px;
@@ -1460,8 +1471,11 @@ h6 {
   color: #1B3764;
 }
 .articles .slide__content-footer a {
+  width: 95px;
   font-size: 19px;
+  letter-spacing: 0.38px;
   border-bottom: 2px solid #1B3764;
+  padding-bottom: 4.5px;
   transition: all 0.5s ease;
 }
 .articles .slide__content-footer a:hover {
@@ -1469,10 +1483,62 @@ h6 {
   border-color: #FFCA42;
 }
 .articles .slide__content-footer p {
+  width: 128px;
   font-size: 16px;
   line-height: 26px;
 }
+.articles .swiper-button-prev,
+.articles .swiper-button-next {
+  background: #FFCA42;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 45%;
+  z-index: 50;
+}
+.articles .swiper-button-prev::after,
+.articles .swiper-button-next::after {
+  color: #1B3764;
+  font-size: 29px;
+  font-weight: 700;
+}
+.articles .swiper-button-prev {
+  left: 0px;
+}
+.articles .swiper-button-next {
+  right: 0px;
+}
 
+@media (max-width: 1150px) {
+  .articles__inner {
+    width: 860px;
+  }
+}
+@media (max-width: 920px) {
+  .articles__inner {
+    max-width: 300px;
+    padding-bottom: 0;
+    padding-top: 40px;
+  }
+  .swiper-button-prev,
+.swiper-button-next {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .articles .slide__content {
+    padding: 15px;
+  }
+  .articles .slide__content-title {
+    font-size: clamp(1.25rem, 0.75rem + 2.5vw, 1.5rem);
+  }
+  .articles .slide__content-txt {
+    font-size: clamp(1.063rem, 0.813rem + 1.25vw, 1.188rem);
+  }
+  .articles .slide__content-footer a {
+    font-size: clamp(1.063rem, 0.813rem + 1.25vw, 1.188rem);
+  }
+}
 .subscription__inner {
   margin: 120px 0;
   background: #FFCA42;
@@ -1748,6 +1814,7 @@ h6 {
   }
   .footer__column-contact .item {
     flex-direction: column;
+    gap: 7px;
   }
   .footer__copyright {
     font-size: clamp(0.813rem, 0.313rem + 2.5vw, 1.063rem);

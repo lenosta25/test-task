@@ -63,7 +63,8 @@ h2 {
 .partnership .partnership__heading,
 .acquired-skills .acquired-skills__heading,
 .chapter-books .chapter-books__heading,
-.reader-reviews .reader-reviews__inner {
+.reader-reviews .reader-reviews__inner,
+.articles .articles__heading {
   @include wide-screen {
     padding-top: 100px;
   }
