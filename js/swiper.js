@@ -16,11 +16,11 @@ window.addEventListener("resize", () => {
       slidesPerView: 1,
       grabCursor: true,
       slideToClickedSlide: true,
-      // autoplay: {
-      //   delay: 4000,
-      //   disableOnInteraction: false,
-      //   pauseOnMouseEnter: true,
-      // },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       keyboard: {
         enabled: true,
       },
@@ -34,17 +34,3 @@ window.addEventListener("resize", () => {
   }
 });
 
-
-// swiper for section ARTICLES
-// let slider = document.querySelector('#slider');
-// console.log(slider);
-// const mySlide = new Swiper( '.slider', {
-//   slideClass: 'slide',
-//   wrepperClass: 'slider-wrapper',
-//   direction: "horizontal",
-//   centeredSlides: true,
-//   loop: true,
-//   slidesPerView: 3,
-//   spaceBetween: 20,
-  
-// })
