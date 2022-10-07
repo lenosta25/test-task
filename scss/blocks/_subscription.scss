@@ -32,6 +32,9 @@
       background: $wight;
       border: 1px solid #dce1e9;
       font-size: 18px;
+      &:focus {
+        border: 2px solid $main;
+      }
     }
     &-btn {
       max-width: 328px;
@@ -42,6 +45,7 @@
       letter-spacing: 1.3px;
       line-height: 31px;
       padding: 20px clamp(1.875rem, -7.966rem + 17.12vw, 7.438rem) 18px;
+      border: none;
     }
   }
 }
