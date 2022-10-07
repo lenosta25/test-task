@@ -17,6 +17,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+._disable-skroll {
+  overflow: hidden;
+}
 
 h1 {
   @extend %heading-font-weight;

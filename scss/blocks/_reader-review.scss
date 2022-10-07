@@ -39,6 +39,18 @@
       }
     }
   }
+  .slider {
+    overflow: hidden;
+    width: 100%;
+  }
+  .slider-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .slide {
+    flex-shrink: 0;
+  }
   &__comments {
     height: auto;
     &-wrapper {
@@ -184,8 +196,16 @@
     }
   }
 }
-// @include small-mobile {
-//   .reader-reviews__comments {
-//     top: 19%;
-//   }
-// }
+@media (max-width: 430px) {
+  .reader-reviews__comments {
+    left: 0;
+    right: 0;
+    &-wrapper {
+      gap: 0;
+      .user-comment,
+      .user-comment:nth-child(2){
+        height: 300px
+      }
+    }
+  }
+}

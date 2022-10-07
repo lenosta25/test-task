@@ -1,22 +1,22 @@
 const mySlide = new Swiper(".swiper", {
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-forward",
+    prevEl: ".swiper-button-rearward",
   },
   direction: "horizontal",
-  slidesPerView: 3,
+  loop: true,
   spaceBetween: 20,
+  rewind: true,
+  loopFillGroupWithBlank: true,
   breakpoints: {
-    920: {
+    320:{
       slidesPerView: 1,
-      spaceBetween: 20,
     },
-    1200: {
+    600: {
       slidesPerView: 2,
-      spaceBetween: 20,
     },
-    1440: {
-      slidesPerView: 2,
+    968: {
+      slidesPerView: 3,
     },
   },
 });

@@ -8,6 +8,7 @@ if (burger && nav) {
     burger.classList.toggle("_active");
     nav.classList.toggle("_active");
     blackout.classList.toggle("_active");
+    body.classList.toggle("_disable-skroll");
   });
 }
 link.forEach((e) => {
@@ -15,5 +16,6 @@ link.forEach((e) => {
     burger.classList.remove("_active");
     nav.classList.remove("_active");
     blackout.classList.remove("_active");
+    body.classList.remove("_disable-skroll");
   });
 });

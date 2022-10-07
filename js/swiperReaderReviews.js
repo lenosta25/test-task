@@ -7,29 +7,27 @@ window.addEventListener("resize", () => {
   );
   const allSwiperSlide = document.querySelectorAll(".user-comment");
   if (mql.matches) {
-    swiper.classList.add("swiper");
-    swiperWrapper.classList.add("swiper-wrapper");
+    swiper.classList.add("slider");
+    swiperWrapper.classList.add("slider-wrapper");
     allSwiperSlide.forEach((e) => {
-      e.classList.add("swiper-slide");
+      e.classList.add("slide");
     });
-    new Swiper(".swiper", {
+    new Swiper(".slider", {
+      slideClass: "slide",
+      wrapperClass: "slider-wrapper",
       slidesPerView: 1,
+      spaceBetween: 20,
       grabCursor: true,
       slideToClickedSlide: true,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
       keyboard: {
         enabled: true,
       },
     });
   } else {
-    swiper.classList.remove("swiper");
-    swiperWrapper.classList.remove("swiper-wrapper");
+    swiper.classList.remove("slider");
+    swiperWrapper.classList.remove("slider-wrapper");
     allSwiperSlide.forEach((e) => {
-      e.classList.remove("swiper-slide");
+      e.classList.remove("slide");
     });
   }
 });
